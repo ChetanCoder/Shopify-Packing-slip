@@ -1,0 +1,9 @@
+{% unless line_item.properties == empty %}
+<span class="line-item-description-line">
+{% for property in line_item.properties %}
+{{ property.first }}: {{ property.last |
+newline_to_br }}
+<br>
+{% endfor %}
+</span>
+{% endunless %}
